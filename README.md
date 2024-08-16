@@ -77,31 +77,30 @@ functions that are needed by kjmjonline packages.
 
 The package name is `minor`.
 
-TODO
+It contains a `zerolog` helper function,
+SetZerologToFile
+to setup the `zerolog` logging facility.
+
+Fully qualified file paths for files in the current working directory can
+be determined with the
+FilenameInCwd
+function.
 
 The
-SetGlobalZerologToFile
-function sets up the
-zerolog
-global logger with settings that kjmjonline uses by default.
-
-FilePathInCwd
-can be used to determine the file path for a file in the current working
-directory.
-
 CaptureOutput
-is a utility function. It is expected that it will be used by test
-functions to capture, and then verify, the output of functions
-under test.
+function can be used to get any ouput from a function. This can be used,
+for instance, to verify that the function is working correctly.
 
-And lastly,
+The Go compiler does an excellent job of catching any unused symbols in
+your code. This can be annoying, however, during development. You can
+use the
 IgnoreUnused
-can be used to ignore unused entities.
+function to silence these "errors".
 
 ### <a name="installation">Installation</a>
 
 ```bash
-go get github.com/kjmjonline/go-minor/v0.1.0
+go get -u -v github.com/kjmjonline/go-minor/v0.1.0
 ```
 
 This will install `go-minor` and its dependencies to your `go/pkg`

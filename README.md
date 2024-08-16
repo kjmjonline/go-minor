@@ -293,7 +293,7 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-[go-badge]: /shields.io/badge/language-Go-cyan.svg "Go language badge"
-[stdlib]: /pkg.go.dev/std/ "Go language standard library"
+[go-badge]: http://shields.io/badge/language-Go-cyan.svg "Go language badge"
+[stdlib]: http://pkg.go.dev/std/ "Go language standard library"
 [^1]: _miniscule_, really!
 

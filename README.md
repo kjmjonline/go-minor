@@ -1,6 +1,6 @@
 ## <a id="readme">README</a>
 
-![Go language badge][go-badge]
+![Go language badge](go-badge)
 "Go language badge")
 ![MIT license badge](http://shields.io/badge/license-MIT-blue.svg
 "MIT license badge")

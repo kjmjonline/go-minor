@@ -1,12 +1,12 @@
 ## <a id="readme">README</a>
 
-![Go language badge](http://shields.io/badge/language-Go-cyan.svg
+![Go language badge][go-badge]
 "Go language badge")
 ![MIT license badge](http://shields.io/badge/license-MIT-blue.svg
 "MIT license badge")
 
 The **_minor_** package contains minor[^1] enhancements to a) the
-[Go languaage standard library][stdlib]
+[Go language standard library][stdlib]
 and b) popular open source libraries.
 
 <details>
@@ -293,6 +293,7 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-[stdlib]: http://pkg.go.dev/std/ "Go language standard library"
+[go-badge]: /shields.io/badge/language-Go-cyan.svg "Go language badge"
+[stdlib]: /pkg.go.dev/std/ "Go language standard library"
 [^1]: _miniscule_, really!
 

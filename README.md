@@ -82,25 +82,19 @@ functions that are needed by kjmjonline packages.
 
 The package name is `minor`.
 
-It contains a zerolog helper function,
-[`SetZerologToFile`][setlog],
+It contains a zerolog helper function, [`SetZerologToFile`][setlog],
 to setup the `zerolog` logging facility.
 
 Fully qualified file paths for files in the current working directory can
-be determined with the
-`FilenameInCwd`
-function.
+be determined with the [`FilenameInCwd`][filepath] function.
 
-The
-`CaptureOutput`
-function can be used to get any ouput from a function. This can be used,
-for instance, to verify that the function is working correctly.
+The [`CaptureOutput`][capture] function can be used to get any ouput from a
+function. This can be used, for instance, to verify that the function is
+working correctly.
 
 The Go compiler does an excellent job of catching any unused symbols in
 your code. This can be annoying, however, during development. You can
-use the
-`IgnoreUnused`
-function to silence these errors.
+use the [`IgnoreUnused`][ignore] function to silence these errors.
 
 ### <a name="installation">Installation</a>
 
@@ -219,7 +213,7 @@ it is created.
 Logging is set up to create log entries with the current time timestamp,
 and file name and line numbers where the log entries were created. The
 timestamps use the
-[RFC 3339 Nano][rfc3339 "RFC 3339 timestamp format"]
+[RFC 3339 Nano][rfc3339]
 time format, which has sub-second precision.
 
 ```go
@@ -297,8 +291,11 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-[stdlib]: http://pkg.go.dev/std/ "Go standard library"
-[setlog]: #setlog "SetGlobalZerologToFile"
-[rfc3339]: https://www.ietf.org/archive/id/draft-ietf-sedate-datetime-extended-09.html "RFC 3339 timestamp format"
-[^1]: _miniscule_, really!
+[stdlib]:   http://pkg.go.dev/std/ "Go standard library"
+[capture]:  #capture "CaptureOutput function"
+[filepath]: #filepath "FilePathInCwd function"
+[ignore]:   #ignore "IgnoreUnused function"
+[setlog]:   #setlog "SetGlobalZerologToFile function"
+[rfc3339]:  https://www.ietf.org/archive/id/draft-ietf-sedate-datetime-extended-09.html "RFC 3339 timestamp format"
+[^1]:       _miniscule_, really!
 

@@ -34,7 +34,7 @@
 
 go-minor - minor Go additions
 
-The ***minor*** package contains minor[^1] enhancements to the Go
+The minor package contains minor[^1] enhancements to the Go
 [standard library][stdlib] and other open source packages.
 
 ### <a name="version">Version</a>
@@ -77,16 +77,15 @@ func main() {
 
 ### <a name="description">Description</a>
 
-This package contains a variety of functions. These are primarily trivial
-functions that are needed by kjmjonline packages.
+This package contains some trivial functions that are needed by kjmjonline.
 
-The package name is **minor**
+The package name is minor.
 
 It contains a zerolog helper function, [SetGlobalZerologToFile][setlog],
 to setup the zerolog logging facility.
 
 Fully qualified file paths for files in the current working directory can
-be determined with the [FilenameInCwd][filepath] function.
+be determined with the [FilePathInCwd][filepath] function.
 
 The [CaptureOutput][capture] function can be used to get any ouput from a
 function. This can be used, for instance, to verify that the function is
@@ -102,7 +101,7 @@ use the [IgnoreUnused][ignore] function to silence these errors.
 go get -u -v github.com/kjmjonline/go-minor/v0.1.0
 ```
 
-This will install `go-minor` and its dependencies to your `go/pkg`
+This will install go-minor and its dependencies to your `go/pkg`
 directory.
 
 ### <a id="funcs">Public Functions</a>
@@ -162,8 +161,8 @@ func main() {
 
 #### <a name="ignore">IgnoreUnused</a>
 
-This function circumvents Go errors that are raised when code contains any
-unused constants, variables, amd/or functions.
+Silences Go errors from when code contains any unused constants, variables,
+amd/or functions.
 
 To silence these errors pass the name of each unused identifier to this
 function.
@@ -240,7 +239,7 @@ func main() {
 ### <a name="dependencies">Dependencies</a>
 
 go-minor uses some packages that are not part of the Go standard library.
-These libraries are _automatically installed_ when go-minor is installed.
+These libraries are _automatically_ installed when go-minor is installed.
 
 They are:
 * github.com/rs/zerolog
@@ -291,10 +290,10 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [stdlib]:   http://pkg.go.dev/std/ "Go standard library"
-[capture]:  #capture "CaptureOutput function"
+[capture]:  #capture  "CaptureOutput function"
 [filepath]: #filepath "FilePathInCwd function"
-[ignore]:   #ignore "IgnoreUnused function"
-[setlog]:   #setlog "SetGlobalZerologToFile function"
+[ignore]:   #ignore   "IgnoreUnused function"
+[setlog]:   #setlog   "SetGlobalZerologToFile function"
 [rfc3339]:  https://www.ietf.org/archive/id/draft-ietf-sedate-datetime-extended-09.html "RFC 3339 timestamp format"
 [^1]:       _miniscule_, really!
 

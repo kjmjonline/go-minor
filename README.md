@@ -294,6 +294,6 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+[stdlib]: http://pkg.go.dev/std/ "Go language standard library"
 [^1]: _miniscule_, really!
-[stdlib]: http://pkg.go.dev/std/
 

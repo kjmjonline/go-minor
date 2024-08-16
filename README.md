@@ -6,11 +6,11 @@
 "MIT license badge")
 
 The **_minor_** package contains minor[^1] enhancements to a) the
-[Go language standard library][stdlib]
-and b) popular open source libraries.
+[Go language standard library][stdlib] and b) popular open source libraries.
 
 <details>
 <summary>Table of Contents</summary>
+<p/>
 
 **Table of Contents**
 - <a href="#version" alt="version">Version</a>
@@ -60,7 +60,7 @@ func main() {
     }
 
     // At this point we can log using the zerolog global logger
-    log.Debug().Msg(
+    log.Print(
         "at this point we can log using the global zerolog logger",
         )
 

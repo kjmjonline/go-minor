@@ -13,7 +13,7 @@ The **_minor_** package contains minor[^1] enhancements to a) the
 <p/>
 
 **Table of Contents**
-- <a href="#version" alt="version">Version</a>
+- [Version][#version version]
 - <a href="#synopsis" alt="synopsis">Synopsis</a>
 - <a href="#description" alt="description">Description</a>
 - <a href="#installation" alt="installation">Installation</a>
@@ -73,13 +73,13 @@ func main() {
 ### <a name="description">Description</a>
 
 This package contains a variety of functions. These are trivial functions
-that are needed by _kjmjonline_ packages.
+that are needed by kjmjonline packages.
 
 The
 SetGlobalZerologToFile
 function sets up the
 zerolog
-global logger with settings that _kjmjonline_ uses by default.
+global logger with settings that kjmjonline uses by default.
 
 FilePathInCwd
 can be used to determine the file path for a file in the current working
@@ -238,11 +238,12 @@ func main() {
 ### <a name="dependencies">Dependencies</a>
 
 go-minor uses some packages that are not part of the Go standard library.
-These libraries are automatically downloaded when go-minor is installed.
+These libraries are _automatically installed_ when go-minor is installed.
+
 They are:
 - github.com/rs/zerolog
 
-What? That's it!
+What??? That's it!
 
 ### <a name="incompat">Incompatibilities</a>
 

@@ -13,22 +13,22 @@ The **_minor_** package contains minor[^1] enhancements to a) the
 <p/>
 
 **Table of Contents**
-- [Version][#version]
-- <a href="#synopsis" alt="synopsis">Synopsis</a>
-- <a href="#description" alt="description">Description</a>
-- <a href="#installation" alt="installation">Installation</a>
-- <a href="#funcs" alt="functions">Public Functions</a>
-  - <a href="#capture" alt="capture output">CaptureOutput</a>
-  - <a href="#filepath" alt="">FilePathInCwd</a>
-  - <a href="#ignore" alt="ignore unused">IgnoreUnused</a>
-  - <a href="#setlog"
+* <a href="#version" alt="version">Version</a>
+* <a href="#synopsis" alt="synopsis">Synopsis</a>
+* <a href="#description" alt="description">Description</a>
+* <a href="#installation" alt="installation">Installation</a>
+* <a href="#funcs" alt="functions">Public Functions</a>
+  * <a href="#capture" alt="capture output">CaptureOutput</a>
+  * <a href="#filepath" alt="">FilePathInCwd</a>
+  * <a href="#ignore" alt="ignore unused">IgnoreUnused</a>
+  * <a href="#setlog"
        alt="set global zerolog to file">SetGlobalZerologToFile</a>
-- <a href="#dependencies" alt="dependencies">Dependencies</a>
-- <a href="#incompat" alt="incompatibilities">Incompatibilities</a>
-- <a href="#bugs" alt="bugs and limitations">Bugs and Limitations</a>
-- <a href="#thanks" alt="acknowledgements">Acknowledgements</a>
-- <a href="#author" alt="author">Author</a>
-- <a href="#copyright"
+* <a href="#dependencies" alt="dependencies">Dependencies</a>
+* <a href="#incompat" alt="incompatibilities">Incompatibilities</a>
+* <a href="#bugs" alt="bugs and limitations">Bugs and Limitations</a>
+* <a href="#thanks" alt="acknowledgements">Acknowledgements</a>
+* <a href="#author" alt="author">Author</a>
+* <a href="#copyright"
      alt="copyright and license">Copyright and License</a>
 </details>
 
@@ -129,7 +129,7 @@ func main() {
 #### <a name="filepath">FilePathInCwd</a>
 
 Returns the full path to the given _fileName_ in the current work directory
-(i.e., equivalent to `cwd` in &#42;nix_ systems).
+(i.e., equivalent to `cwd` in &#42;nix systems).
 
 The current directory is the directory that this program was started from. 
 

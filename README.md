@@ -62,7 +62,7 @@ func main() {
     // At this point we can log using the zerolog global logger
     log.Print(
         "at this point we can log using the global zerolog logger",
-        )
+    )
 
     ...
 
@@ -73,13 +73,13 @@ func main() {
 ### <a name="description">Description</a>
 
 This package contains a variety of functions. These are trivial functions
-that are needed by kjmjonline packages.
+that are needed by _kjmjonline_ packages.
 
 The
 SetGlobalZerologToFile
 function sets up the
 zerolog
-global logger with settings that kjmjonline uses by default.
+global logger with settings that _kjmjonline_ uses by default.
 
 FilePathInCwd
 can be used to determine the file path for a file in the current working
@@ -260,7 +260,9 @@ Please report any that you may find.
 ### <a name="thanks">Acknowledgements</a>
 
 The CaptureOutput, FilePathInCwd, and IgnoreUnused functions were adopted
-from other sources and changed slightly. Please report if any
+from other sources and changed slightly.
+
+Please report if any
 acknowledgements ffor these functions should be added to this documentation.
 
 ### <a name="author">Author</a>

@@ -13,7 +13,7 @@ The **_minor_** package contains minor[^1] enhancements to a) the
 <p/>
 
 **Table of Contents**
-- [Version][#version "version"]
+- [Version][#version]
 - <a href="#synopsis" alt="synopsis">Synopsis</a>
 - <a href="#description" alt="description">Description</a>
 - <a href="#installation" alt="installation">Installation</a>

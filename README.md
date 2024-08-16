@@ -34,7 +34,7 @@
 
 go-minor - minor Go additions
 
-The ***minor*** package contains minor[^2] enhancements to the Go
+The ***minor*** package contains minor[^1] enhancements to the Go
 Go [standard library][stdlib] and other open source packages.
 
 ### <a name="version">Version</a>
@@ -83,24 +83,24 @@ functions that are needed by kjmjonline packages.
 The package name is `minor`.
 
 It contains a `zerolog` helper function,
-[setlog][`SetZerologToFile`],
+[`SetZerologToFile`][setlog SetZerologToFile],
 to setup the `zerolog` logging facility.
 
 Fully qualified file paths for files in the current working directory can
 be determined with the
-FilenameInCwd
+`FilenameInCwd`
 function.
 
 The
-CaptureOutput
+`CaptureOutput`
 function can be used to get any ouput from a function. This can be used,
 for instance, to verify that the function is working correctly.
 
 The Go compiler does an excellent job of catching any unused symbols in
 your code. This can be annoying, however, during development. You can
 use the
-IgnoreUnused
-function to silence these "errors".
+`IgnoreUnused`
+function to silence these errors.
 
 ### <a name="installation">Installation</a>
 
@@ -143,7 +143,6 @@ The current directory is the directory that this program was started from.
 
 This may be different from the directory that the executable is in.
 
-
 ```go
 import (
     "fmt"
@@ -172,7 +171,7 @@ func main() {
 This function circumvents Go errors that are raised when code contains any
 unused constants, variables, amd/or functions.
 
-To silence these errors pass the name of each such identifier to the
+To silence these errors pass the name of each unused identifier to the
 <a href="#ignore" title="ignore unused function">`IgnoreUnused()`</a>
 function.
 
@@ -249,40 +248,31 @@ func main() {
 
 ### <a name="dependencies">Dependencies</a>
 
-go-minor uses some packages that are not part of the Go standard library.
+`go-minor` uses some packages that are not part of the Go standard library.
 These libraries are _automatically installed_ when go-minor is installed.
 
 They are:
-- github.com/rs/zerolog
+* github.com/rs/zerolog
 
-What??? That's it!
-
-### <a name="incompat">Incompatibilities</a>
-
-This package has no known incompatibilities with any other packages or
-operating systems.
-
-Please report any that you may find.
+What!? that you may find.
 
 ### <a name="bugs">Bugs and Limitations</a>
 
 This package has no known bugs or limitations.
 
-Please report any that you may find.
+Please report any incompatibilities to <justinhanekom7@outlook.com>.
 
 ### <a name="thanks">Acknowledgements</a>
 
-The CaptureOutput, FilePathInCwd, and IgnoreUnused functions were adopted
-from other sources and changed slightly.
+The `CaptureOutput`, `FilePathInCwd`, and `IgnoreUnused` functions were
+adopted from other sources that have been lost in the mists of time, and changed slightly.
 
-Please report if any
-acknowledgements ffor these functions should be added to this documentation.
+Please report if any missing acknowledgements to
+<justinhanekom7@outlook.com>.
 
 ### <a name="author">Author</a>
 
 Justin Hanekom
-
-Email: <justinhanekom7@outlook.com>
 
 ### <a name="copyright">Copyright and License</a>
 

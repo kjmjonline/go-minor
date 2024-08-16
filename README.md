@@ -80,21 +80,21 @@ func main() {
 This package contains a variety of functions. These are primarily trivial
 functions that are needed by kjmjonline packages.
 
-The package name is `minor`.
+The package name is **minor**
 
-It contains a zerolog helper function, [`SetZerologToFile`][setlog],
-to setup the `zerolog` logging facility.
+It contains a zerolog helper function, [SetGlobalZerologToFile][setlog],
+to setup the zerolog logging facility.
 
 Fully qualified file paths for files in the current working directory can
-be determined with the [`FilenameInCwd`][filepath] function.
+be determined with the [FilenameInCwd][filepath] function.
 
-The [`CaptureOutput`][capture] function can be used to get any ouput from a
+The [CaptureOutput][capture] function can be used to get any ouput from a
 function. This can be used, for instance, to verify that the function is
 working correctly.
 
 The Go compiler does an excellent job of catching any unused symbols in
 your code. This can be annoying, however, during development. You can
-use the [`IgnoreUnused`][ignore] function to silence these errors.
+use the [IgnoreUnused][ignore] function to silence these errors.
 
 ### <a name="installation">Installation</a>
 
@@ -165,8 +165,7 @@ func main() {
 This function circumvents Go errors that are raised when code contains any
 unused constants, variables, amd/or functions.
 
-To silence these errors pass the name of each unused identifier to the
-<a href="#ignore" title="ignore unused function">`IgnoreUnused()`</a>
+To silence these errors pass the name of each unused identifier to this
 function.
 
 ```go
@@ -205,16 +204,14 @@ func main() {
 
 #### <a name="setlog">SetGlobalZerologToFile</a>
 
-This function sets up the global `zerolog` logger.
+This function sets up the global zerolog logger.
 
-The file used for logging is appended to if it already exists, otherwise
-it is created.
+The log file is appended to if it already exists, otherwise it is created.
 
 Logging is set up to create log entries with the current time timestamp,
 and file name and line numbers where the log entries were created. The
-timestamps use the
-[RFC 3339 Nano][rfc3339]
-time format, which has sub-second precision.
+timestamps use the [RFC 3339 Nano][rfc3339] time format, which has
+sub-second precision.
 
 ```go
 import (
@@ -242,13 +239,13 @@ func main() {
 
 ### <a name="dependencies">Dependencies</a>
 
-`go-minor` uses some packages that are not part of the Go standard library.
+go-minor uses some packages that are not part of the Go standard library.
 These libraries are _automatically installed_ when go-minor is installed.
 
 They are:
 * github.com/rs/zerolog
 
-What!? that you may find.
+What!? That's it!
 
 ### <a name="bugs">Bugs and Limitations</a>
 
@@ -258,8 +255,10 @@ Please report any incompatibilities to <justinhanekom7@outlook.com>.
 
 ### <a name="thanks">Acknowledgements</a>
 
-The `CaptureOutput`, `FilePathInCwd`, and `IgnoreUnused` functions were
-adopted from other sources that have been lost in the mists of time, and changed slightly.
+The CaptureOutput, FilePathInCwd, and IgnoreUnused functions were
+adopted from other sources that have been lost to the mists of time.
+
+The functions have been changed slightly.
 
 Please report if any missing acknowledgements to
 <justinhanekom7@outlook.com>.

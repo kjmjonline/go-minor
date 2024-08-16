@@ -5,14 +5,12 @@
 ![MIT license badge](http://shields.io/badge/license-MIT-blue.svg
 "MIT license badge")
 
-The ***minor*** package contains minor[^1] enhancements to a) the
-Go language [standard library][stdlib] and b) popular open source libraries.
-
 <details>
 <summary>Table of Contents</summary>
 <p/>
 
 **Table of Contents**
+* <a href="#name" alt="name">Name</a>
 * <a href="#version" alt="version">Version</a>
 * <a href="#synopsis" alt="synopsis">Synopsis</a>
 * <a href="#description" alt="description">Description</a>
@@ -31,6 +29,13 @@ Go language [standard library][stdlib] and b) popular open source libraries.
 * <a href="#copyright"
      alt="copyright and license">Copyright and License</a>
 </details>
+
+### <a name="name">Name</a>
+
+go-minor - minor Go additions
+
+The ***minor*** package contains minor[^2] enhancements to the Go
+Go [standard library][stdlib] and other open source packages.
 
 ### <a name="version">Version</a>
 
@@ -78,7 +83,7 @@ functions that are needed by kjmjonline packages.
 The package name is `minor`.
 
 It contains a `zerolog` helper function,
-SetZerologToFile
+[setlog][`SetZerologToFile`],
 to setup the `zerolog` logging facility.
 
 Fully qualified file paths for files in the current working directory can
@@ -302,8 +307,8 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-[stdlib]: http://pkg.go.dev/std/ "Go language standard library"
-[rfc3339]: https://www.ietf.org/archive/id/draft-ietf-sedate-datetime-extended-09.html
-"RFC 3339 timestamp format"
+[stdlib]: http://pkg.go.dev/std/ "Go standard library"
+[setlog]: #setlog "SetGlobalZerologToFile"
+[rfc3339]: https://www.ietf.org/archive/id/draft-ietf-sedate-datetime-extended-09.html "RFC 3339 timestamp format"
 [^1]: _miniscule_, really!
 

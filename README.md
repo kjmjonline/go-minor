@@ -5,8 +5,8 @@
 ![MIT license badge](http://shields.io/badge/license-MIT-blue.svg
 "MIT license badge")
 
-The **_minor_** package contains minor[^1] enhancements to a) the
-[Go language standard library][stdlib] and b) popular open source libraries.
+The ***minor*** package contains minor[^1] enhancements to a) the
+Go language [standard library][stdlib] and b) popular open source libraries.
 
 <details>
 <summary>Table of Contents</summary>
@@ -34,7 +34,7 @@ The **_minor_** package contains minor[^1] enhancements to a) the
 
 ### <a name="version">Version</a>
 
-This documentation is for _go-minor_ version **0.1.0**
+This documentation is for go-minor version **v0.1.0**
 
 ### <a name="synopsis">Synopsis</a>
 
@@ -72,8 +72,12 @@ func main() {
 
 ### <a name="description">Description</a>
 
-This package contains a variety of functions. These are trivial functions
-that are needed by kjmjonline packages.
+This package contains a variety of functions. These are primarily trivial
+functions that are needed by kjmjonline packages.
+
+The package name is `minor`.
+
+TODO
 
 The
 SetGlobalZerologToFile
@@ -131,7 +135,10 @@ func main() {
 Returns the full path to the given _fileName_ in the current work directory
 (i.e., equivalent to `cwd` in &#42;nix systems).
 
-The current directory is the directory that this program was started from. 
+The current directory is the directory that this program was started from.
+
+This may be different from the directory that the executable is in.
+
 
 ```go
 import (
@@ -158,12 +165,12 @@ func main() {
 
 #### <a name="ignore">IgnoreUnused</a>
 
-This function circumvents Go errors that are raised when trying to compile
-code that contains any unused constants, variables, amd/or functions.
+This function circumvents Go errors that are raised when code contains any
+unused constants, variables, amd/or functions.
 
 To silence these errors pass the name of each such identifier to the
-`IgnoreUnused()`
-function. 
+<a href="#ignore" title="ignore unused function">`IgnoreUnused()`</a>
+function.
 
 ```go
 import (
@@ -201,15 +208,16 @@ func main() {
 
 #### <a name="setlog">SetGlobalZerologToFile</a>
 
-This function sets up the global zerolog logger.
+This function sets up the global `zerolog` logger.
 
 The file used for logging is appended to if it already exists, otherwise
 it is created.
 
 Logging is set up to create log entries with the current time timestamp,
 and file name and line numbers where the log entries were created. The
-timestamps use the RFC 3339 Nano time format, wbhich is a format that has
-millisecond accuracy.
+timestamps use the
+[RFC 3339 Nano][rfc3339 "RFC 3339 timestamp format"]
+time format, which has sub-second precision.
 
 ```go
 import (
@@ -270,7 +278,7 @@ acknowledgements ffor these functions should be added to this documentation.
 
 Justin Hanekom
 
-Email: justinhanekom7@outlook.com
+Email: <justinhanekom7@outlook.com>
 
 ### <a name="copyright">Copyright and License</a>
 
@@ -296,5 +304,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [stdlib]: http://pkg.go.dev/std/ "Go language standard library"
+[rfc3339]: https://www.ietf.org/archive/id/draft-ietf-sedate-datetime-extended-09.html
+"RFC 3339 timestamp format"
 [^1]: _miniscule_, really!
 

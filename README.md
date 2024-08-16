@@ -35,7 +35,7 @@
 go-minor - minor Go additions
 
 The ***minor*** package contains minor[^1] enhancements to the Go
-Go [standard library][stdlib] and other open source packages.
+[standard library][stdlib] and other open source packages.
 
 ### <a name="version">Version</a>
 
@@ -82,8 +82,8 @@ functions that are needed by kjmjonline packages.
 
 The package name is `minor`.
 
-It contains a `zerolog` helper function,
-[`SetZerologToFile`][setlog SetZerologToFile],
+It contains a zerolog helper function,
+[`SetZerologToFile`][setlog],
 to setup the `zerolog` logging facility.
 
 Fully qualified file paths for files in the current working directory can

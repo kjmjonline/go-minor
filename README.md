@@ -6,8 +6,7 @@
 "MIT license badge")
 
 The **_minor_** package contains minor[^1] enhancements to a) the
-[stdlib]["Go language standard library"]
-"Go language standard library API");
+[stdlib]
 and b) popular open source libraries.
 
 <details>

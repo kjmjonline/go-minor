@@ -295,5 +295,5 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [^1]: _miniscule_, really!
-[stdlib]: [/pkg.go.dev/std/ "Go language standard library API"]
+[stdlib]: /pkg.go.dev/std/ "Go language standard library API"
 

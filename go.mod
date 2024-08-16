@@ -1,4 +1,4 @@
-module minor
+module github.com/kjmjonline/go-minor
 
 go 1.22.2
 

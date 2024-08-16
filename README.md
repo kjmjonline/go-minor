@@ -79,8 +79,6 @@ func main() {
 
 This package contains some trivial functions that are needed by kjmjonline.
 
-The package name is minor.
-
 It contains a zerolog helper function, [SetGlobalZerologToFile][setlog],
 to setup the zerolog logging facility.
 
@@ -108,7 +106,8 @@ directory.
 
 #### <a id="capture">CaptureOutput</a>
 
-Captures, and returns, the `stdout` and `stderr` output of a function.
+Captures, and returns, the merged `stdout` and `stderr` output of a
+function.
 
 ```go
 import (
@@ -259,8 +258,7 @@ adopted from other sources that have been lost to the mists of time.
 
 The functions have been changed slightly.
 
-Please report if any missing acknowledgements to
-<justinhanekom7@outlook.com>.
+Please report any missing acknowledgements to <justinhanekom7@outlook.com>.
 
 ### <a name="author">Author</a>
 

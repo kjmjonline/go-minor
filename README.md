@@ -44,12 +44,13 @@ This documentation is for go-minor version **v0.1.0**
 ### <a name="synopsis">Synopsis</a>
 
 ```go
+package main
+
 import (
     "log"
 
-    "github.com/kjmjonline/go-minor@latest"
+    "github.com/kjmjonline/go-minor"
     "github.com/rs/zerolog"
-    "github.com/rs/zerolog/log"
 )
 
 func main() {
@@ -62,7 +63,7 @@ func main() {
     }
 
     // Now we will initialize the zerlogo logging to this file
-    if err = minor.SetGlobalZerologToFile(filepath); err != nil {
+    if err = minor.SetGlobalZerologToFile(filepath, zerolog.DebugLevel); err != nil {
         log.Fatal(err)
     }
 
@@ -111,10 +112,12 @@ Captures, and returns, the merged `stdout` and `stderr` output of a
 function.
 
 ```go
+package main
+
 import (
     "fmt"
 
-    "github.com/kjmjonline/go-minor@latest"
+    "github.com/kjmjonline/go-minor"
 )
 
 func sayHello() {
@@ -140,10 +143,12 @@ The current directory is the directory that this program was started from.
 This may be different from the directory that the executable is in.
 
 ```go
+package main
+
 import (
     "fmt"
 
-    "github.com/kjmjonline/go-minor@latest"
+    "github.com/kjmjonline/go-minor"
 )
 
 func main() {
@@ -173,12 +178,14 @@ To silence these errors pass the name of each unused identifier to this
 function.
 
 ```go
+package main
+
 import (
     // We can ignore unused package import errors by preceding the
     // unused package with un underscore character:
     _ "fmt"
 
-    "github.com/kjmjonline/go-minor@latest"
+    "github.com/kjmjonline/go-minor"
 )
 
 const unusedConst = 42
@@ -219,12 +226,14 @@ The log messages are colored. If you do not want colored logs you could
 create a utility to remove the color escape character sequences.
 
 ```go
+package main
+
 import (
     "errors"
     "fmt"
     "log"
 
-    "github.com/kjmjonline/go-minor@latest"
+    "github.com/kjmjonline/go-minor"
     "github.com/rs/zerolog/log"
     "github.com/rs/zerolog/pkgerrors"
 )

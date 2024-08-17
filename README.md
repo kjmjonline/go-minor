@@ -47,7 +47,9 @@ This documentation is for go-minor version **v0.1.0**
 import (
     "log"
 
-    "github.com/kjmjonline/go-minor/v0.1.0"
+    "github.com/kjmjonline/go-minor@@latest"
+    "github.com/rs/zerolog"
+    "github.com/rs/zerolog/log"
 )
 
 func main() {
@@ -60,7 +62,7 @@ func main() {
     }
 
     // Now we will initialize the zerlogo logging to this file
-    if err = minor.SetGlobalZerologToFile(filepath) {
+    if err = minor.SetGlobalZerologToFile(filepath); err != nil {
         log.Fatal(err)
     }
 
@@ -90,13 +92,13 @@ function. This can be used, for instance, to verify that the function is
 working correctly.
 
 The Go compiler does an excellent job of catching any unused symbols in
-your code. This can be annoying, however, during development. You can
-use the [IgnoreUnused][ignore] function to silence these errors.
+your code. You cani, however, use the [IgnoreUnused][ignore] function to
+silence these errors, for instance during development.
 
 ### <a name="installation">Installation</a>
 
 ```bash
-go get -u -v github.com/kjmjonline/go-minor/v0.1.0
+go get -u -v github.com/kjmjonline/go-minor@latest
 ```
 
 This will install go-minor and its dependencies to your `go/pkg`
@@ -113,7 +115,7 @@ function.
 import (
     "fmt"
 
-    "github.com/kjmjonline/go-minor/v0.1.0"
+    "github.com/kjmjonline/go-minor@latest"
 )
 
 func sayHello() {
@@ -123,6 +125,10 @@ func sayHello() {
 func main() {
     greeting, err := minor.CaptureOutput(sayHello)
     // `greeting` will contain "Hello, stranger!" here
+
+    if err == nil {
+        fmt.Println(greeting)
+    }
 }
 ```
 
@@ -139,13 +145,15 @@ This may be different from the directory that the executable is in.
 import (
     "fmt"
 
-    "github.com/kjmjonline/go-minor/v0.1.0"
+    "github.com/kjmjonline/go-minor@latest"
 )
 
 func main() {
     fileName := "blort.txt"
 
+    // i.e., the path plus the filename
     var filePath string
+
     var err error
     if filePath, err = minor.FilePathInCwd(fileName); err != nil {
         panic(err)
@@ -168,13 +176,11 @@ function.
 
 ```go
 import (
-    "fmt"
-
     // We can ignore unused package import errors by preceding the
     // unused package with un underscore character:
-    _ "os/path" 
+    _ "fmt"
 
-    "github.com/kjmjonline/go-minor/v0.1.0"
+    "github.com/kjmjonline/go-minor@latest"
 )
 
 const unusedConst = 42
@@ -204,12 +210,15 @@ func main() {
 
 This function sets up the global zerolog logger.
 
-The log file is appended to if it already exists, otherwise it is created.
+The log file is created, or is appended to if it already exists.
 
 Logging is set up to create log entries with the current time timestamp,
 and file name and line numbers where the log entries were created. The
 timestamps use the [RFC 3339 Nano][rfc3339] time format, which has
 sub-second precision.
+
+The log messages are colored. If you do not want colored logs you could
+create a utility to remove the color escape character sequences.
 
 ```go
 import (
@@ -217,7 +226,7 @@ import (
     "fmt"
     "log"
 
-    "github.com/kjmjonline/go-minor/v01.0"
+    "github.com/kjmjonline/go-minor@latest"
     "github.com/rs/zerolog/log"
     "github.com/rs/zerolog/pkgerrors"
 )
@@ -227,10 +236,12 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
+
+    // log.Print() is equivalent to log.Debug().Msg()`
     log.Print("global zerolog has been created")
 
     err := errors.New("Whoa!")
-     := errors.WithStack(err)
+    wrapped := errors.WithStack(err)
     log.Error().Stack().Err(wrapped).Msg("An error with a stacktrace")
 }
 ```

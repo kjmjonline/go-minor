@@ -47,7 +47,7 @@ This documentation is for go-minor version **v0.1.0**
 import (
     "log"
 
-    "github.com/kjmjonline/go-minor@@latest"
+    "github.com/kjmjonline/go-minor@latest"
     "github.com/rs/zerolog"
     "github.com/rs/zerolog/log"
 )
@@ -57,7 +57,7 @@ func main() {
     // of the file to write logs to in the current working directory
     var filepath string
     var err error
-    if filepath, err = minor.FilePathInCwd("my-project.log"); err !=  nil {
+    if filepath, err = minor.FilePathInCwd("my-project.log"); err != nil {
         log.Fatal(err)
     }
 
@@ -66,9 +66,8 @@ func main() {
         log.Fatal(err)
     }
 
-    // At this point we can log using the zerolog global logger
     log.Print(
-        "at this point we can log using the global zerolog logger",
+        "At this point we can log using the global zerolog logger",
     )
 
     ...
@@ -81,7 +80,7 @@ func main() {
 
 This package contains some trivial functions that are needed by kjmjonline.
 
-It contains a zerolog helper function, [SetGlobalZerologToFile][setlog],
+It contains a zerolog helper function [SetGlobalZerologToFile][setlog]
 to setup the zerolog logging facility.
 
 Fully qualified file paths for files in the current working directory can
@@ -92,7 +91,7 @@ function. This can be used, for instance, to verify that the function is
 working correctly.
 
 The Go compiler does an excellent job of catching any unused symbols in
-your code. You cani, however, use the [IgnoreUnused][ignore] function to
+your code. You can, however, use the [IgnoreUnused][ignore] function to
 silence these errors, for instance during development.
 
 ### <a name="installation">Installation</a>
@@ -138,7 +137,6 @@ Returns the full path to the given _fileName_ in the current work directory
 (i.e., equivalent to `cwd` in &#42;nix systems).
 
 The current directory is the directory that this program was started from.
-
 This may be different from the directory that the executable is in.
 
 ```go

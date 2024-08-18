@@ -3,7 +3,7 @@
 
 /*
   Copyright (c) 2024 Justin Hanekom
-  
+
   Permission is hereby granted, free of charge, to any person obtaining
   a copy of this software and associated documentation files
   (the "Software"), to deal in the Software without restriction,
@@ -11,10 +11,10 @@
   publish, distribute, sublicense, and/or sell copies of the Software,
   and to permit persons to whom the Software is furnished to do so,
   subject to the following conditions:
-  
+
   The above copyright notice and this permission notice shall be
   included in all copies or substantial portions of the Software.
-  
+
   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
@@ -22,7 +22,7 @@
   CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
   TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
   SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
+*/
 
 package minor
 
@@ -111,9 +111,11 @@ func IgnoreUnused(vals ...interface{}) {
 // millisecond accuracy.
 //
 // If you want to log stack traces then you should follow this pattern:
-//   ```go
-//   withStack := errors.WithStack(err)
-//   log.Error().Stack().Err(withStack).Msg("an error occurred")
+//
+//	```go
+//	withStack := errors.WithStack(err)
+//	log.Error().Stack().Err(withStack).Msg("an error occurred")
+//
 // i.e., you need to wrap the error using github.com/pkg/errors.
 func SetGlobalZerologToFile(logName string, level zerolog.Level) (err error) {
 	var f *os.File

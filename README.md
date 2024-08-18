@@ -229,9 +229,7 @@ create a utility to remove the color escape character sequences.
 package main
 
 import (
-    "errors"
-    "fmt"
-    "log"
+    sl "log"
 
     "github.com/kjmjonline/go-minor"
     "github.com/rs/zerolog/log"
@@ -241,10 +239,10 @@ import (
 func main() {
     err := minor.SetGlobalZerologToFile("mylog", zerolog.DebugLevel)
     if err != nil {
-        log.Fatal(err)
+        sl.Fatal(err)
     }
 
-    // log.Print() is equivalent to log.Debug().Msg()`
+    // log.Print() is similar to log.Debug().Msg()`
     log.Print("global zerolog has been created")
 
     err := errors.New("Whoa!")

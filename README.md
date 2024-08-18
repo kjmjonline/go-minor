@@ -163,16 +163,16 @@ func main() {
     }
     fmt.Print(filePath)
 
-    // If the current directory (the directory this program was started
-    // from) is "/tmp" then the`filePath` returned would be:
+    // If the current directory (the directory this program was
+    // started from) is "/tmp" then the`filePath` returned would be:
     //   "/tmp/blort.txt".
 }
 ```
 
 #### <a name="ignore">IgnoreUnused</a>
 
-Silences Go errors from when code contains any unused constants, variables,
-amd/or functions.
+Silences Go errors caused when code contains any unused constants,
+variables, and/or functions.
 
 To silence these errors pass the name of each unused identifier to this
 function.
@@ -242,7 +242,7 @@ func main() {
         sl.Fatal(err)
     }
 
-    // log.Print() is similar to log.Debug().Msg()`
+    // log.Print() is similar to log.Debug().Msg()
     log.Print("global zerolog has been created")
 
     err := errors.New("Whoa!")
@@ -310,4 +310,3 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 [setlog]:   #setlog   "SetGlobalZerologToFile function"
 [rfc3339]:  https://www.ietf.org/archive/id/draft-ietf-sedate-datetime-extended-09.html "RFC 3339 timestamp format"
 [^1]:       _miniscule_, really!
-

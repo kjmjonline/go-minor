@@ -1,5 +1,6 @@
 // File: minor.go
 // SPDX-License-Identifier: MIT
+// -*- mode: Go -*-
 
 /*
   Copyright (c) 2024 Justin Hanekom

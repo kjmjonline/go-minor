@@ -22,8 +22,8 @@ This change log follows the conventions of
 
 - N/A.
 
-## 1.0.0 -- YYYY-mm-dd
+## 1.0.0 -- 2024-09-29
 
 * First version. Released on an unsuspecting world.
 
-[Unreleased]: https://github.com/kjmjonline/go-minor/compare/0.1.0...HEAD
+[Unreleased]: https://github.com/kjmjonline/go-minor/compare/v0.1.0...HEAD

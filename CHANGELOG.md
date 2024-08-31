@@ -9,6 +9,7 @@ This change log follows the conventions of
 ### Added
 
 - CHANGELOG.md
+- .editorconfig
 
 ### Changed
 

@@ -26,4 +26,4 @@ This change log follows the conventions of
 
 * First version. Released on an unsuspecting world.
 
-[Unreleased]: https://github.com/kjmjonline/go-minor/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/kjmjonline/go-minor/compare/v1.0.0...HEAD
